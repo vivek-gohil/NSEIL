@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="contactDetails" class="com.nse.pojo.ContactDetails">
+		<constructor-arg name="contactId" value="101" />
+		<constructor-arg name="firstName" value="Prathamesh" />
+		<constructor-arg name="lastName" value="Naik" />
+		<constructor-arg name="contactNumber" value="9773287442" />
+		<constructor-arg name="email" value="prathameshn" />
+		<constructor-arg name="contactType" value="developer" />
+		<constructor-arg name="contactStatus" value="cool" />
+	</bean>
+
+	<bean id="clientDetails" class="com.nse.pojo.ClientDetails"
+		scope="prototype" autowire="byType">
+		<constructor-arg name="clientId" value="102" />
+		<constructor-arg name="companyName" value="NSE" />
+		<constructor-arg name="clientStatus" value="Active" />
+	</bean>
+</beans>

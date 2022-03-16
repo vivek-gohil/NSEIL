@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Setter Injection -->
+	<!-- <bean id="permanentAddress" class="com.nse.pojo.Address" -->
+	<!-- scope="prototype"> -->
+	<!-- <property name="houseNumber" value="B-212 ,Nisarga CHS" /> -->
+	<!-- <property name="street" value="A.B Road" /> -->
+	<!-- <property name="city" value="Mumbai" /> -->
+	<!-- <property name="pin" value="400012" /> -->
+	<!-- </bean> -->
+
+
+	<!-- Constructor Injection -->
+	<bean id="permanentAddress" class="com.nse.pojo.Address" scope="prototype">
+		<constructor-arg name="houseNumber" value="B-212 ,Nisarga CHS"/>
+		<constructor-arg name="street" value="A.B Road" />
+		<constructor-arg name="city" value="Mumbai" />
+		<constructor-arg name="pin" value="400012"/>
+	</bean>
+
+</beans>
